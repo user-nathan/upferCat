@@ -4,173 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meteocat | Espacio Independiente</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-blue: #3498db;
-            --dark-bg: #1a1a1a;
-            --text-main: #2c3e50;
-            --light-gray: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            color: var(--text-main);
-            background-color: var(--light-gray);
-        }
-
-        /* HEADER CON FOTO */
-        header {
-            position: relative;
-            height: 400px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('/logo2.png'); /* URL DE TU FOTO AQUÍ
-                        
-                        https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80
-                        */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            opacity: 0.9;
-        }
-
-        /* CUERPO DE LA PÁGINA (BODY) */
-        main {
-            flex: 1;
-            max-width: 1000px;
-            margin: -50px auto 50px; /* Hace que el cuerpo suba un poco sobre el header */
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            width: 90%;
-            box-sizing: border-box;
-        }
-
-        .content-section {
-            line-height: 1.8;
-        }
-
-        h2 {
-            color: var(--dark-bg);
-            border-bottom: 2px solid var(--primary-blue);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        .btn-action {
-            display: inline-block;
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .btn-action:hover {
-            transform: translateY(-3px);
-            background-color: #2980b9;
-        }
-
-        /* FOOTER NEGRO MODERNO */
-        footer {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .footer-links {
-            margin: 20px 0;
-        }
-
-        .footer-links a {
-            color: #888;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .copyright {
-            color: #555;
-            font-size: 0.8rem;
-            margin-top: 40px;
-            border-top: 1px solid #222;
-            padding-top: 20px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>CAT</h1>
-        <p>Móstoles Campus | Innovación Meteorológica</p>
+    <header class="site-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <span class="header-subtitle">Móstoles Campus &bull; Innovación Meteorológica</span>
+            <h1 class="header-title">CAT</h1>
+            <div class="header-separator"></div>
+        </div>
     </header>
 
-    <main>
-        <div class="content-section">
-            <h2>sdgasdgadfgdafgadfgadfg</h2>
-            <p>sadgasdgasdgasdgasdgasdgasdgadgasdg.</p>
+    <main class="main-wrapper">
+        <section class="premium-card">
+            <h2 class="card-title">Unidad de Procesos de Fabricación y Energías Renovables</h2>
             
-            <a href="/index.html" class="btn-action">Taller mecánico </a>
-            <a href="/index.html" class="btn-action">Energías renovables</a>
-        </div>
+            <div class="showcase-image">
+                <img src="img/construccion.jpg" alt="Instalaciones de la unidad de procesos de fabricación">
+            </div>
+            
+            <p class="card-description">
+                Repositorio técnico especializado para la consulta, gestión y optimización de recursos energéticos y procesos avanzados de fabricación.
+            </p>
+            
+            <div class="actions-grid">
+                <a href="/archivos/TM-Ficha_descriptiva_22-04-2024.pdf" class="btn-premium btn-solid">
+                    Taller mecánico
+                </a>
+                <a href="/index.html" class="btn-premium btn-outline">
+                    Energías renovables
+                </a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <span class="footer-logo">RepoMeteocat URJC</span>
-            <div class="footer-links">
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="logo-text">RepoMeteocat URJC</span>
+                <p class="logo-sub">Universidad Rey Juan Carlos &copy; 2026</p>
+            </div>
+            <nav class="footer-navigation" aria-label="Enlaces institucionales">
                 <a href="#">Datos en Vivo</a>
                 <a href="#">Histórico</a>
                 <a href="#">Sobre el Proyecto</a>
                 <a href="#">Contacto</a>
-            </div>
-            <div class="copyright">
-                &copy; 2026 Universidad Rey Juan Carlos. Todos los derechos reservados.
-            </div>
+            </nav>
         </div>
     </footer>
 

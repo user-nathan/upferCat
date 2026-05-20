@@ -1,0 +1,277 @@
+:root {
+    /* Paleta Premium: Tonos oscuros, sutiles dorados y fondos limpios */
+    --gold-primary: #c5a880;     
+    --luxury-black: #111625;    
+    --text-dark: #2c3344;       
+    --text-muted: #697488;      
+    --bg-light: #faf9f6;        
+    --card-white: #ffffff;
+    --transition-smooth: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   HEADER (FIJO Y COMPACTO, SIN SOLAPAR)
+   ========================================== */
+.site-header {
+    position: relative;
+    padding: 60px 20px; /* Relleno uniforme */
+    background: url('img/logo2.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.header-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(17, 22, 37, 0.85) 0%, rgba(17, 22, 37, 0.75) 100%);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.header-subtitle {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold-primary);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.1;
+}
+
+.header-separator {
+    width: 40px;
+    height: 1px;
+    background-color: var(--gold-primary);
+    margin: 15px auto 0;
+}
+
+/* ==========================================
+   CONTENIDO CENTRAL (UBICADO DEBAJO)
+   ========================================== */
+.main-wrapper {
+    flex: 1;
+    width: 90%;
+    max-width: 900px;
+    /* Margen superior normal y positivo para separar la tarjeta del header */
+    margin: 40px auto; 
+    position: relative;
+    z-index: 3;
+}
+
+.premium-card {
+    background: var(--card-white);
+    padding: 30px 20px;
+    border-radius: 6px; 
+    box-shadow: 0 10px 30px rgba(17, 22, 37, 0.03);
+    border: 1px solid rgba(197, 168, 128, 0.15); 
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--luxury-black);
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Imagen estática sin efectos visuales de zoom ni escalas */
+.showcase-image {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.showcase-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 30px;
+    font-weight: 400;
+}
+
+/* ==========================================
+   BOTONES ELEGANTES Y ADAPTABLES
+   ========================================== */
+.actions-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna por defecto en móviles */
+    gap: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.btn-premium {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.btn-solid {
+    background-color: var(--luxury-black);
+    color: white;
+    border: 1px solid var(--luxury-black);
+}
+
+.btn-solid:hover {
+    background-color: var(--gold-primary);
+    border-color: var(--gold-primary);
+    color: var(--luxury-black);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--luxury-black);
+    border: 1px solid #dcdad4;
+}
+
+.btn-outline:hover {
+    border-color: var(--luxury-black);
+    background-color: rgba(17, 22, 37, 0.02);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.site-footer {
+    background-color: var(--luxury-black);
+    color: #a0aec0;
+    padding: 40px 20px;
+    font-size: 0.85rem;
+    border-top: 3px solid var(--gold-primary);
+}
+
+.footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.logo-text {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+    font-size: 1rem;
+}
+
+.logo-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-navigation a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.footer-navigation a:hover {
+    color: var(--gold-primary);
+}
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVIDAD REAL)
+   ========================================== */
+
+/* Tablets en adelante */
+@media (min-width: 600px) {
+    .actions-grid {
+        grid-template-columns: repeat(2, 1fr); /* Botones en fila uno al lado del otro */
+    }
+}
+
+/* Pantallas de Computadora */
+@media (min-width: 768px) {
+    .site-header {
+        padding: 90px 20px;
+    }
+
+    .header-title {
+        font-size: 4.5rem;
+    }
+
+    .premium-card {
+        padding: 50px 40px;
+    }
+
+    .card-title {
+        font-size: 2.2rem;
+    }
+
+    .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-brand {
+        text-align: left;
+    }
+}

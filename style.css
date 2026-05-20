@@ -4,7 +4,7 @@
     --luxury-black: #111625;    
     --text-dark: #2c3344;       
     --text-muted: #697488;      
-    --bg-light: #faf9f6;        
+    --bg-light: #a5a5a5;        
     --card-white: #ffffff;
     --transition-smooth: all 0.3s ease;
 }
@@ -30,13 +30,14 @@ body {
    ========================================== */
 .site-header {
     position: relative;
-    padding: 60px 20px; /* Relleno uniforme */
-    background: url('img/logo4.jpg') center/cover no-repeat;
+    padding: 40px 20px; /* Relleno uniforme */
+    height:80px;
+    background: url('img/logo4.JPG') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .header-overlay {

@@ -31,7 +31,7 @@ body {
 .site-header {
     position: relative;
     padding: 60px 20px; /* Relleno uniforme */
-    background: url('img/logo2.png') center/cover no-repeat;
+    background: url('img/logo4.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;

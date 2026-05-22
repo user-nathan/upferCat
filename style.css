@@ -1,17 +1,17 @@
 /* ==========================================================================
-   Estilo Precision Engineering - Edición Especial Meteocat Nav Button
+   Estilo Precision Engineering - Nav Expandido & Header Estable
    ========================================================================== */
 
    :root {
-    --bg-global: #f3f4f6;         /* Gris claro industrial */
-    --bg-surface: #ffffff;        /* Blanco puro nítido */
-    --text-dark: #111827;         /* Negro profundo técnico */
-    --text-muted: #4b5563;        /* Gris pizarra para descripciones */
-    --border-line: #e5e7eb;       /* Línea fina de separación */
+    --bg-global: #f3f4f6;         /* Gris claro industrial de fondo */
+    --bg-surface: #ffffff;        /* Blanco puro */
+    --text-dark: #111827;         /* Negro profundo */
+    --text-muted: #4b5563;        /* Gris pizarra */
+    --border-line: #e5e7eb;       
     
-    /* Acento Rojo de Precisión */
-    --tech-red: #dc2626;          
-    --tech-red-soft: #fef2f2;     
+    /* Paleta Técnica de Alto Rendimiento */
+    --tech-red: #dc2626;          /* Rojo de precisión */
+    --overlay-dark: rgba(17, 24, 39, 0.82); /* Capa oscura protectora del texto */
 }
 
 /* Reset Base */
@@ -35,7 +35,7 @@ body {
     padding: 0 24px;
 }
 
-/* --- Barra de Navegación Fija Constante --- */
+/* --- Barra de Navegación Fija Superior (Ampliada a 85px) --- */
 .hub-nav {
     background-color: var(--bg-surface);
     border-bottom: 1px solid var(--border-line);
@@ -44,13 +44,13 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
-    height: 65px; /* Ligeramente ampliado para contener el botón cómodamente */
+    height: 85px; /* Altura más imponente y espaciosa */
 }
 
 .nav-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 12px 24px;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,28 +59,28 @@ body {
 
 .brand-main {
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.3rem; /* Ligeramente más grande acorde al nuevo nav */
     color: var(--text-dark);
     letter-spacing: -0.5px;
 }
 
 .brand-sub {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
     border-left: 1px solid var(--border-line);
-    padding-left: 10px;
-    margin-left: 10px;
+    padding-left: 12px;
+    margin-left: 12px;
 }
 
 /* Grupo del Estado + Botón Meteocat */
 .nav-status-group {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .nav-status {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: var(--text-dark);
     display: flex;
@@ -89,22 +89,22 @@ body {
 }
 
 .status-indicator {
-    width: 7px;
-    height: 7px;
-    background-color: #10b981; /* Verde esmeralda operacional para el sistema activo */
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
     border-radius: 50%;
 }
 
-/* Botón Exclusivo de Meteocat en Nav */
+/* Botón Meteocat en Nav */
 .btn-nav-meteocat {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--bg-surface);
     background-color: var(--text-dark);
-    padding: 8px 16px;
+    padding: 10px 20px; /* Botón con mayor presencia */
     border-radius: 4px;
     border: 1px solid var(--text-dark);
     transition: all 0.2s ease;
@@ -113,23 +113,23 @@ body {
 .btn-nav-meteocat:hover {
     background-color: var(--tech-red);
     border-color: var(--tech-red);
-    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.15);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
 }
 
-/* --- Blindaje del Contenedor (Mantiene el Header Inmóvil) --- */
+/* --- Área Total Protegida Sin Scroll --- */
 .viewport-wrapper {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
-    min-height: calc(100vh - 125px);
+    min-height: calc(100vh - 145px); /* Compensación matemática exacta de alturas */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 28px;
-    padding-top: 95px;
+    justify-content: center; /* Centrado vertical estricto */
+    gap: 30px;
+    padding-top: 115px; /* Colchón aumentado para que el nav grande no pise el header */
 }
 
-/* Cabecera Estática Industrial */
+/* Cabecera Estática Compacta Original */
 .hub-hero-compact {
     text-align: center;
     padding-bottom: 5px;
@@ -142,111 +142,115 @@ body {
     letter-spacing: -0.3px;
 }
 
-/* --- Bloque Central de Filas de Enlace --- */
+/* --- Distribución en Cuadrícula Lado a Lado (Grid Dual) --- */
 .hub-main-centered {
     width: 100%;
 }
 
-.gateway-list-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.gateway-grid-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales al lado una de otra */
+    gap: 24px;
 }
 
-.gateway-row-link {
+.gateway-box-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-.gateway-row {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-line);
-    border-radius: 8px;
-    padding: 26px 40px;
-    display: grid;
-    grid-template-columns: 1fr 100px;
-    align-items: center;
-    gap: 40px;
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+/* Estructura del Recuadro / Tarjeta */
+.gateway-box {
+    position: relative;
+    background-color: var(--text-dark);
+    border-radius: 10px;
+    padding: 45px 40px;
+    min-height: 250px; /* Altura perfecta para equilibrar el espacio visual */
+    display: flex;
+    align-items: flex-end; 
+    overflow: hidden;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-/* Bloque Informativo */
-.row-info {
+/* Manejo de la Imagen de Fondo */
+.box-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    filter: grayscale(40%) contrast(1.05); /* Acabado técnico industrial */
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+/* Capa Oscura de Contraste */
+.box-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.3) 0%, var(--overlay-dark) 75%);
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+/* Contenido de Texto */
+.box-content {
+    position: relative;
+    z-index: 3;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
+    width: 100%;
 }
 
-.row-title {
-    font-size: 1.35rem;
-    color: var(--text-dark);
+.box-title {
+    font-size: 1.45rem;
+    color: #ffffff;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: color 0.2s ease;
 }
 
-.row-title .arrow {
+.box-title .arrow {
     font-size: 1.2rem;
-    color: var(--text-muted);
-    transition: transform 0.2s ease, color 0.2s ease;
+    color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.row-desc {
+.box-desc {
     font-size: 0.94rem;
-    color: var(--text-muted);
-    max-width: 750px;
+    color: #d1d5db;
 }
 
-/* Contenedor del Logo */
-.row-logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 65px;
-    background-color: var(--bg-global);
-    border-radius: 6px;
-    padding: 12px;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
+/* --- Estados Hover --- */
+.gateway-box-link:hover .gateway-box {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(17, 24, 39, 0.15);
+    border-color: var(--tech-red);
 }
 
-.platform-logo {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.2s ease;
-}
-
-/* --- Estados Hover Ejecutivos --- */
-.gateway-row-link:hover .gateway-row {
-    border-color: var(--tech-red); 
-    box-shadow: 0 10px 25px rgba(17, 24, 39, 0.04);
-    transform: translateX(4px);
-}
-
-.gateway-row-link:hover .row-title {
+.gateway-box-link:hover .box-title .arrow {
     color: var(--tech-red);
+    transform: translateX(5px);
 }
 
-.gateway-row-link:hover .row-title .arrow {
-    color: var(--tech-red);
-    transform: translateX(4px);
+.gateway-box-link:hover .box-bg-image {
+    transform: scale(1.04);
+    filter: grayscale(0%) contrast(1.1); /* Recupera color al apuntarlo */
 }
 
-.gateway-row-link:hover .row-logo-container {
-    background-color: var(--tech-red-soft);
-    border-color: rgba(220, 38, 38, 0.15);
+.gateway-box-link:hover .box-overlay {
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.2) 0%, rgba(17, 24, 39, 0.88) 80%);
 }
 
-.gateway-row-link:hover .platform-logo {
-    transform: scale(1.05);
-}
-
-/* --- Pie de Página --- */
+/* --- Pie de Página Fijo --- */
 .hub-footer-compact {
     background-color: var(--bg-surface);
     border-top: 1px solid var(--border-line);
@@ -291,11 +295,11 @@ body {
 /* --- Adaptabilidad de Pantalla --- */
 @media (max-width: 860px) {
     .hub-nav { height: auto; }
-    .nav-container { flex-direction: column; gap: 12px; padding: 12px; }
+    .nav-container { flex-direction: column; gap: 14px; padding: 16px 24px; }
     .nav-status-group { width: 100%; justify-content: space-between; }
-    .viewport-wrapper { padding-top: 140px; gap: 20px; min-height: auto; }
-    .gateway-row { grid-template-columns: 1fr; gap: 16px; padding: 25px; }
-    .row-logo-container { width: 80px; height: 60px; }
+    .viewport-wrapper { padding-top: 165px; gap: 24px; min-height: auto; }
+    .gateway-grid-dual { grid-template-columns: 1fr; }
+    .gateway-box { padding: 35px 30px; min-height: 210px; }
     .hub-title { font-size: 1.25rem; text-align: center; }
     .footer-flex { flex-direction: column; gap: 12px; text-align: center; }
 }

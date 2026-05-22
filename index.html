@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPFER</title>
+    <title>UPFER | Portal de Enlaces Tecnológicos</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,70 +13,71 @@
 </head>
 <body>
 
-    <nav class="corporate-nav">
+    <nav class="hub-nav">
         <div class="nav-container">
             <div class="nav-brand">
-                <span class="brand-main">CAT</span>
+                <span class="brand-main">UPFER</span>
                 <span class="brand-sub">Móstoles Campus</span>
             </div>
-            <div class="nav-actions">
-                <a href="http://meteocat.urjc.es/" class="btn-nav-link" target="_blank">
-                    Acceder a Meteocat &rarr;
+            
+            <div class="nav-status-group">
+                <!-- <div class="nav-status">
+                    <span class="status-indicator"></span> Sistema Activo
+                </div> -->
+                <a href="http://meteocat.urjc.es/" class="btn-nav-meteocat" target="_blank">
+                    Meteocat &rarr;
                 </a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <span class="hero-tag">Centro de Apoyo Tecnológico</span>
-                <h1 class="hero-title">Innovación Meteorológica & Procesos de Fabricación</h1>
-                <!-- <p class="hero-subtitle">Ecosistema de desarrollo técnico enfocado en la ingeniería de precisión y la optimización de sistemas de energías renovables.</p> -->
-            </div>
-        </div>
-    </header>
+    <div class="viewport-wrapper">
+        
+        <header class="hub-hero-compact">
+            <h1 class="hub-title">Unidad de Procesos de Fabricación y Energías Renovables</h1>
+        </header>
 
-    <main class="main-content">
-        <div class="container">
-            
-            <section class="showcase-card">
-                <div class="card-body">
-                    <div class="card-text">
-                        <span class="section-badge">Infraestructura Avanzada</span>
-                        <h2 class="card-heading">Unidad de Procesos de Fabricación y Energías Renovables</h2>
-                        <p class="card-paragraph">
-                            Espacio dedicado a la proyección, análisis y manufactura de soluciones industriales avanzadas. Un entorno donde la investigación académica se conecta de manera directa con los flujos de trabajo técnicos y el desarrollo sostenible.
-                        </p>
+        <main class="hub-main-centered">
+            <div class="gateway-list-container">
+
+                <a href="taller.html" class="gateway-row-link">
+                    <article class="gateway-row">
+                        <div class="row-info">
+                            <h2 class="row-title">Taller Mecánico <span class="arrow">&rarr;</span></h2>
+                            <p class="row-desc">Laboratorio avanzado de proyección, mecanizado, y fabricación industrial.</p>
+                        </div>
                         
-                        <div class="button-group">
-                            <a href="taller.html" class="btn-corporate btn-primary">
-                                Taller Mecánico
-                            </a>
-                            <a href="/index.html" class="btn-corporate btn-secondary">
-                                Energías Renovables
-                            </a>
+                        <div class="row-logo-container">
+                            <img src="img/logo-taller.png" alt="Logo Taller Mecánico" class="platform-logo">
                         </div>
-                    </div>
-                    
-                    <div class="card-visual">
-                        <div class="image-wrapper">
-                            <img src="img/construccion.jpg" alt="Instalaciones de la Unidad de Procesos de Fabricación">
+                    </article>
+                </a>
+
+                <a href="/index.html" class="gateway-row-link">
+                    <article class="gateway-row">
+                        <div class="row-info">
+                            <h2 class="row-title">Energías Renovables <span class="arrow">&rarr;</span></h2>
+                            <p class="row-desc">Optimización, análisis de datos sostenibles y desarrollo energético eficiente.</p>
                         </div>
-                    </div>
-                </div>
-            </section>
+                        
+                        <div class="row-logo-container">
+                            <img src="img/logo-renovables.png" alt="Logo Energías Renovables" class="platform-logo">
+                        </div>
+                    </article>
+                </a>
 
-        </div>
-    </main>
-
-    <footer class="corporate-footer">
-        <div class="container footer-grid">
-            <div class="footer-meta">
-                <span class="footer-logo">URJC</span>
-                <p>Universidad Rey Juan Carlos &copy; 2026. Todos los derechos reservados.</p>
             </div>
-            <nav class="footer-links" aria-label="Navegación secundaria">
+        </main>
+        
+    </div>
+
+    <footer class="hub-footer-compact">
+        <div class="container footer-flex">
+            <div class="footer-info">
+                <span class="footer-brand">URJC</span>
+                <p>Universidad Rey Juan Carlos &copy; 2026.</p>
+            </div>
+            <nav class="footer-nav-links" aria-label="Enlaces del pie de página">
                 <a href="#">Datos en Vivo</a>
                 <a href="#">Histórico</a>
                 <a href="#">Sobre el Proyecto</a>

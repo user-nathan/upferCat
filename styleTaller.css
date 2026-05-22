@@ -106,11 +106,18 @@ nav ul li a:hover {
 .hero h1 {
     font-size: 3rem;
     font-weight: 800;
-    color: var(--texto-brillante);
     line-height: 1.2;
     margin-bottom: 20px;
+    
+    /* Configuración del degradado (de negro a gris oscuro) */
     background: linear-gradient(to right, var(--texto-brillante), var(--tech-purple));
+    
+    /* Propiedades de recorte para que el degradado se aplique solo a las letras */
+    background-clip: text;
     -webkit-background-clip: text;
+    
+    /* Hace transparente el color base para que se vea el degradado de fondo */
+    color: transparent;
     -webkit-text-fill-color: transparent;
 }
 

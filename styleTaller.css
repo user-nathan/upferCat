@@ -1,0 +1,306 @@
+/* ==========================================================================
+   Estética Cyber-Premium (Futurista & Elegante)
+   ========================================================================== */
+
+/* Variables de Color Neo-Tech */
+:root {
+    --bg-principal: #f1f1f1;      /* Azul oscuro profundo */
+    --bg-secundario: #ffffff;     /* Bloques oscuros contrastados */
+    --tech-cyan: #575757;         /* Cian de alta tecnología */
+    --tech-purple: #484848;       /* Azul eléctrico */
+    --texto-brillante: #000000;
+    --texto-apagado: #000000;
+    --borde-vidrio: rgba(0, 0, 0, 0);
+}
+
+/* Reset y estructura base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-apagado);
+    line-height: 1.8;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Barra de Navegación (Efecto Cristal Esmerilado) --- */
+nav {
+    background: rgb(255, 213, 0);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--borde-vidrio);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+}
+
+nav .logo {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--texto-brillante);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav .logo span {
+    color: var(--tech-cyan);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.365);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--texto-apagado);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--tech-cyan);
+}
+
+/* --- Sección Hero --- */
+.hero {
+    background: linear-gradient(135deg, rgba(114, 114, 114, 0.836) 40%, rgba(114, 114, 114, 0.836)), 
+                url('img/logo2.png') no-repeat center center/cover; /* https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80*/
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px 24px;
+    border-bottom: 1px solid var(--borde-vidrio);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--texto-brillante);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, var(--texto-brillante), var(--tech-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+}
+
+.btn-futurista {
+    display: inline-block;
+    padding: 12px 30px;
+    color:#ffffff;/*var(--bg-principal);*/
+    background:#000000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-futurista:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+}
+
+/* --- Títulos Generales h2 --- */
+h2 {
+    font-size: 2rem;
+    color: var(--texto-brillante);
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--tech-cyan);
+    margin: 15px auto 0 auto;
+    box-shadow: 0 0 8px var(--tech-cyan);
+}
+
+/* --- Secciones de Texto Continuo --- */
+.seccion-texto {
+    padding: 90px 0;
+}
+
+.seccion-texto p {
+    font-size: 1.1rem;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.seccion-trabajo {
+    padding: 90px 0;
+    background-color: var(--bg-secundario);
+    border-top: 1px solid var(--borde-vidrio);
+    border-bottom: 1px solid var(--borde-vidrio);
+}
+
+/* --- MENU DESPLEGABLE DE ENLACES (ESTILO TECH) --- */
+.menu-desplegable-futurista {
+    background: var(--bg-principal);
+    border: 1px solid var(--borde-vidrio);
+    border-left: 3px solid var(--tech-cyan);
+    border-radius: 4px;
+    max-width: 500px;
+    margin: 0 auto 60px auto;
+}
+
+.menu-desplegable-futurista summary {
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texto-brillante);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-desplegable-futurista summary::-webkit-details-marker {
+    display: none; /* Oculta flecha por defecto en Safari */
+}
+
+.menu-desplegable-futurista .flecha {
+    color: var(--tech-cyan);
+    transition: transform 0.3s ease;
+}
+
+.menu-desplegable-futurista[open] .flecha {
+    transform: rotate(180deg);
+}
+
+.enlaces-desplegable {
+    padding: 10px 0;
+    border-top: 1px solid var(--borde-vidrio);
+    display: flex;
+    flex-direction: column;
+}
+
+.enlaces-desplegable a {
+    padding: 12px 20px;
+    color: var(--texto-apagado);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.enlaces-desplegable a:hover {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--tech-cyan);
+}
+
+.enlaces-desplegable a span {
+    color: var(--tech-purple);
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* --- Bloques de Contenido Secuenciales --- */
+.bloque-contenido {
+    margin-bottom: 80px;
+    padding-top: 20px;
+}
+
+.bloque-contenido:last-child {
+    margin-bottom: 0;
+}
+
+.bloque-contenido h3 {
+    font-size: 1.5rem;
+    color: var(--texto-brillante);
+    margin-bottom: 15px;
+}
+
+.bloque-contenido p {
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Efecto Contenedor y Brillo para Imágenes */
+.contenedor-img {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--borde-vidrio);
+}
+
+.bloque-contenido img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%) brightness(90%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.contenedor-img:hover img {
+    filter: grayscale(0%) brightness(100%);
+    transform: scale(1.02);
+}
+
+/* --- letras del footer --- */
+footer {
+    background-color: var(--bg-principal);
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 40px 24px;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--borde-vidrio);
+}
+
+/* --- Diseño Adaptable para Dispositivos Móviles --- */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 4%;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .bloque-contenido img {
+        max-height: 280px;
+    }
+}

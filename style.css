@@ -60,7 +60,7 @@ body {
 .brand-main {
     font-weight: 700;
     font-size: 1.3rem; /* Ligeramente más grande acorde al nuevo nav */
-    color: var(--text-dark);
+    color: var(--tech-red);
     letter-spacing: -0.5px;
 }
 
@@ -269,7 +269,7 @@ body {
 
 .footer-brand {
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--tech-red);
     font-size: 0.9rem;
 }
 

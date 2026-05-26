@@ -4,7 +4,7 @@
             --bg-principal: #ffffff;
             --bg-seccion-clara: #f4f7f5; /* Un gris con un sutil matiz verde ecológico */
             --texto-oscuro: #2c3e35;      /* Gris carbón con tinte verde bosque para el texto */
-            --verde-acento: #3b7a57;      /* Verde hoja corporativo para destacar elementos */
+            --verde-acento: #d40e0e;      /* #3b7a57 Verde hoja corporativo para destacar elementos */
             --verde-hover: #29573d;       /* Verde más oscuro para interacciones */
             --linea-division: #e1e8e4;
         }
@@ -24,7 +24,7 @@
 
         /* Barra de Navegación */
         nav {
-            background-color: var(--bg-principal);
+            background-color:var(--bg-principal);
             border-bottom: 1px solid var(--linea-division);
             padding: 20px 40px;
             display: flex;

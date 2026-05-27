@@ -2,7 +2,7 @@
         /* --- ESTILOS ADAPTADOS AL CUIDADO DEL MEDIO AMBIENTE --- */
         :root {
             --bg-principal: #ffffff;
-            --bg-seccion-clara: #f4f7f5; /* Un gris con un sutil matiz verde ecológico */
+            --bg-seccion-clara: #b1b1b1; /* Un gris con un sutil matiz verde ecológico #f4f7f5 */
             --texto-oscuro: #2c3e35;      /* Gris carbón con tinte verde bosque para el texto */
             --verde-acento: #d40e0e;      /* #3b7a57 Verde hoja corporativo para destacar elementos */
             --verde-hover: #29573d;       /* Verde más oscuro para interacciones */
@@ -138,13 +138,13 @@
 
         /* Sección Servicios / Trabajo */
         .seccion-trabajo {
-            background-color: var(--bg-seccion-clara);
+            background-color: var(--bg-principal); /* fondo del contenedor de los servicios  */
             border-top: 1px solid var(--linea-division);
         }
 
         /* Menú Desplegable */
         .menu-desplegable-futurista {
-            background-color: var(--bg-principal);
+            background-color:#ededed; /* color del fondo del desplegable var(--bg-principal) */
             border: 1px solid var(--linea-division);
             border-radius: 4px;
             padding: 15px;
@@ -184,7 +184,7 @@
 
         /* Bloques de Contenido (Artículos) */
         .bloque-contenido {
-            background-color: var(--bg-principal);
+            background-color:#ededed; /* var(--bg-principal) */ 
             border: 1px solid var(--linea-division);
             border-radius: 6px;
             padding: 40px;

@@ -1,319 +1,260 @@
-/* ==========================================================================
-   Estética Cyber-Premium (Futurista & Elegante)
-   ========================================================================== */
-
-/* Variables de Color Neo-Tech */
+/* --- ESTILOS ADAPTADOS A ENTORNO INDUSTRIAL Y DE ALTA PRECISIÓN --- */
 :root {
-    --bg-principal: rgb(255, 255, 255);      /* Azul oscuro profundo */
-    --bg-secundario: #ffffff;     /* contenedor 2 de texto */
-    --tech-cyan: #ff0000;         /* para cambiar los bordes y lineas de los totulos y del desplegable */
-    --tech-purple: #000000;       /* color para los puntos del desplegable */
-    --texto-brillante: #000000;
-    --texto-apagado: #ffffff;
-    --borde-vidrio: rgba(117, 117, 117, 0);
-    --linea-division:#e1e8e4;
-    --bg-menu: #f4f4f480;
-    --texto-boton:#ffffff;
+    --bg-principal: #ffffff;
+    --bg-seccion-clara: #f1f4f6;   /* Gris claro industrial con sutil matiz acero */
+    --texto-oscuro: #1e293b;       /* Tono pizarra oscuro para lecturas nítidas */
+    --rojo-acento: #d40e0e;       /* Rojo vivo para destacar elementos clave */
+    --rojo-hover: #990a0a;        /* Rojo oscuro para interacciones */
+    --linea-division: #e2e8f0;
 }
 
-/* Reset y estructura base */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-principal);
-    color: var(--texto-brillante);
-    line-height: 1.8;
+    color: var(--texto-oscuro);
+    line-height: 1.6;
 }
 
-.contenedor {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-/* --- Barra de Navegación (Efecto Cristal Esmerilado) --- */
+/* Barra de Navegación */
 nav {
-    background: var(--bg-principal); /* color del fondo del nav*/
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: var(--bg-principal);
     border-bottom: 1px solid var(--linea-division);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav .logo {
-    font-weight: 800;
-    font-size: 1.3rem;
-    color: var(--texto-brillante); /* color de letra logo */
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--texto-oscuro);
 }
 
 nav .logo span {
-    color: var(--tech-cyan); /* color de texto logo */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.377);
+    color: var(--rojo-acento);
 }
 
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 30px;
+    gap: 30px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--texto-brillante); /* color de las letras del header  */
+    color: var(--texto-oscuro);
     font-weight: 500;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--tech-cyan);
+    color: var(--rojo-acento);
 }
 
-/* --- Sección Hero --- */
+/* Sección Hero */
 .hero {
-    /*background: linear-gradient(135deg, rgba(255, 255, 255, 0.836) 40%, rgba(255, 255, 255, 0.836)), 
-                url('img/logo2.png') no-repeat center center/cover;  https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80*/
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(241, 244, 246, 0.95)), 
+                url('img/centroMecanizado.jpg') no-repeat center/cover;
+    padding: 100px 20px;
     text-align: center;
-    padding: 120px 24px 80px 24px;
-    border-bottom: 1px solid var(--borde-vidrio);
 }
 
-.hero-content {
-    max-width: 750px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.2;
+.hero-content h1 {
+    font-size: 42px;
+    color: var(--texto-oscuro);
     margin-bottom: 20px;
-    
-    /* Configuración del degradado (de negro a gris oscuro) */
-    background: linear-gradient(to right, var(--texto-brillante), var(--tech-purple));
-    
-    /* Propiedades de recorte para que el degradado se aplique solo a las letras */
-    background-clip: text;
-    -webkit-background-clip: text;
-    
-    /* Hace transparente el color base para que se vea el degradado de fondo */
-    color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
-.hero p {
-    font-size: 1.15rem;
-    margin-bottom: 35px;
+.hero-content p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #475569;
 }
 
 .btn-futurista {
     display: inline-block;
+    background-color: var(--rojo-acento);
+    color: #ffffff;
     padding: 12px 30px;
-    color:#ffffff;/*var(--bg-principal);*/
-    background:rgb(203, 0, 23);
     text-decoration: none;
     font-weight: 600;
     border-radius: 4px;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-futurista:hover {
+    background-color: var(--rojo-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
 }
 
-/* --- Títulos Generales h2 --- */
-h2 {
-    font-size: 2rem;
-    color: var(--texto-brillante);
+/* Secciones Generales */
+.contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.seccion-texto {
+    background-color: var(--bg-principal);
     text-align: center;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
 }
 
-h2::after {
+.seccion-texto h2, .seccion-trabajo h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--texto-oscuro);
+    position: relative;
+    display: inline-block;
+}
+
+.seccion-texto h2::after, .seccion-trabajo h2::after {
     content: '';
     display: block;
-    width: 40px;
-    height: 2px;
-    background-color: var(--tech-cyan);
-    margin: 15px auto 0 auto;
-    box-shadow: 0 0 8px var(--tech-cyan);
-}
-
-/* --- Secciones de Texto Continuo --- */
-.seccion-texto {
-    padding: 90px 0;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 60px;
+    height: 3px;
+    background-color: var(--rojo-acento);
+    margin: 10px auto 0 auto;
 }
 
 .seccion-texto p {
-    font-size: 1.1rem;
-    max-width: 760px;
+    font-size: 17px;
+    color: #475569;
+    max-width: 850px;
     margin: 0 auto;
     text-align: justify;
 }
 
+/* Sección Servicios / Trabajo */
 .seccion-trabajo {
-    padding: 90px 0;
-    background-color: var(--bg-secundario);
-    border-top: 1px solid var(--borde-vidrio);
-    border-bottom: 1px solid var(--borde-vidrio);
+    background-color: var(--bg-principal);
+    border-top: 1px solid var(--linea-division);
 }
 
-/* --- MENU DESPLEGABLE DE ENLACES (ESTILO TECH) --- */
+/* Menú Desplegable */
 .menu-desplegable-futurista {
-    background: var(--bg-menu);
-    border: 1px solid var(--borde-vidrio); /* --borde-vidrio */
-    border-left: 3px solid var(--tech-cyan);
+    background-color: var(--bg-seccion-clara); 
+    border: 1px solid var(--linea-division);
     border-radius: 4px;
-    max-width: 500px;
-    margin: 0 auto 60px auto;
+    padding: 15px;
+    margin-bottom: 40px;
 }
 
 .menu-desplegable-futurista summary {
-    padding: 15px 20px;
-    font-size: 1rem;
     font-weight: 600;
-    color: var(--texto-brillante);
     cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu-desplegable-futurista summary::-webkit-details-marker {
-    display: none; /* Oculta flecha por defecto en Safari */
-}
-
-.menu-desplegable-futurista .flecha {
-    color: var(--tech-cyan);
-    transition: transform 0.3s ease;
-}
-
-.menu-desplegable-futurista[open] .flecha {
-    transform: rotate(180deg);
+    color: var(--texto-oscuro);
+    outline: none;
 }
 
 .enlaces-desplegable {
-    padding: 10px 0;
-    border-top: 1px solid var(--borde-vidrio);
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
 }
 
 .enlaces-desplegable a {
-    padding: 12px 20px;
-    color: var(--texto-brillante); /*color texto desplegable */
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: background 0.2s, color 0.2s;
+    color: #475569;
+    transition: color 0.2s ease;
 }
 
 .enlaces-desplegable a:hover {
-    background: rgba(255, 255, 255, 0.02);
-    color: var(--tech-cyan);
+    color: var(--rojo-acento);
 }
 
-.enlaces-desplegable a span {
-    color: var(--tech-purple);
-    margin-right: 8px;
+.enlaces-desplegable span {
+    color: var(--rojo-acento);
     font-weight: bold;
+    margin-right: 10px;
 }
 
-/* --- Bloques de Contenido Secuenciales --- */
+/* Bloques de Contenido (Artículos) */
 .bloque-contenido {
-    margin-bottom: 80px;
-    padding-top: 20px;
-}
-
-.bloque-contenido:last-child {
-    margin-bottom: 0;
+    background-color: var(--bg-seccion-clara); 
+    border: 1px solid var(--linea-division);
+    border-radius: 6px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 
 .bloque-contenido h3 {
-    font-size: 1.5rem;
-    color: var(--texto-brillante);
+    font-size: 22px;
+    color: var(--texto-oscuro);
     margin-bottom: 15px;
+    border-left: 4px solid var(--rojo-acento);
+    padding-left: 15px;
 }
 
 .bloque-contenido p {
-    margin-bottom: 30px;
+    color: #475569;
+    margin-bottom: 15px;
     text-align: justify;
 }
 
-/* Efecto Contenedor y Brillo para Imágenes */
-.contenedor-img {
-    position: relative;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid var(--borde-vidrio);
+/* Listas Técnicas de Especificaciones */
+.lista-tecnica {
+    list-style-type: none;
+    margin-bottom: 25px;
+    padding-left: 5px;
 }
 
-.bloque-contenido img {
+.lista-tecnica li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #475569;
+    text-align: justify;
+}
+
+.lista-tecnica li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    color: var(--rojo-acento);
+    font-size: 12px;
+    top: 2px;
+}
+
+/* Contenedor de Imágenes */
+.contenedor-img {
     width: 100%;
-    max-height: 420px;
-    object-fit: cover;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--linea-division);
+    margin-top: 20px;
+}
+
+.contenedor-img img {
+    width: 100%;
+    height: auto;
     display: block;
-    filter: grayscale(20%) brightness(90%);
-    transition: filter 0.4s ease, transform 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
 .contenedor-img:hover img {
-    filter: grayscale(0%) brightness(100%);
     transform: scale(1.02);
 }
 
-/* --- letras del footer --- */
+/* Pie de Página */
 footer {
     background-color: var(--bg-principal);
-    color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid var(--linea-division);
     text-align: center;
-    padding: 40px 24px;
-    font-size: 0.85rem;
-    border-top: 1px solid var(--borde-vidrio);
-}
-
-/* --- Diseño Adaptable para Dispositivos Móviles --- */
-@media (max-width: 768px) {
-    nav {
-        padding: 15px 4%;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    h2 {
-        font-size: 1.6rem;
-    }
-    .bloque-contenido img {
-        max-height: 280px;
-    }
+    padding: 30px 20px;
+    color: #94a3b8;
+    font-size: 14px;
 }

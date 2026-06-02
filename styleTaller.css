@@ -1,4 +1,4 @@
-/* --- ESTILOS ADAPTADOS A ENTORNO INDUSTRIAL Y DE ALTA PRECISIÓN --- */
+
 :root {
     --bg-principal: #ffffff;
     --bg-seccion-clara: #f1f4f6;   /* Gris claro industrial con sutil matiz acero */
@@ -61,7 +61,9 @@ nav ul li a:hover {
     color: var(--rojo-acento);
 }
 
-/* Sección Hero */
+/* Sección Hero,
+aqui podemos cambiar la imagen de fondo que se encutra debajo del titulo Taller Mecanico
+*/
 .hero {
     background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(241, 244, 246, 0.95)), 
                 url('img/centroMecanizado.jpg') no-repeat center/cover;
@@ -181,7 +183,7 @@ nav ul li a:hover {
     margin-right: 10px;
 }
 
-/* Bloques de Contenido (Artículos) */
+/* Bloques de Contenido*/
 .bloque-contenido {
     background-color: var(--bg-seccion-clara); 
     border: 1px solid var(--linea-division);

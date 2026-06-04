@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Estilo Precision Engineering - Nav Expandido & Header Estable
-   ========================================================================== */
 
    :root {
     --bg-global: #f3f4f6;         /* Gris claro industrial de fondo */
@@ -21,7 +18,7 @@
     box-sizing: border-box;
 }
 
-/* MODIFICADO: Estructura Flexbox para obligar al footer a irse abajo */
+/* Estructura Flexbox para obligar al footer a irse abajo */
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     background-color: var(--bg-global);
@@ -40,7 +37,7 @@ body {
     padding: 0 24px;
 }
 
-/* --- Barra de Navegación Fija Superior (Ampliada a 85px) --- */
+/* --- Barra de Navegación Fija Superior */
 .hub-nav {
     background-color: var(--bg-surface);
     border-bottom: 1px solid var(--border-line);
@@ -121,7 +118,7 @@ body {
     box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
 }
 
-/* --- MODIFICADO: Área Total Protegida con flex: 1 --- */
+
 .viewport-wrapper {
     width: 100%;
     max-width: 1100px;
@@ -137,7 +134,7 @@ body {
     padding-bottom: 30px; /* Colchón de seguridad inferior antes del footer */
 }
 
-/* Cabecera Estática Compacta Original */
+/* Cabecera Estática Original */
 .hub-hero-compact {
     text-align: center;
     padding-bottom: 5px;
@@ -150,7 +147,7 @@ body {
     letter-spacing: -0.3px;
 }
 
-/* --- Distribución en Cuadrícula Lado a Lado (Grid Dual) --- */
+/* --- Distribución en Cuadrícula Lado a Lado*/
 .hub-main-centered {
     width: 100%;
 }

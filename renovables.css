@@ -61,7 +61,7 @@ nav ul li a:hover {
     color: var(--rojo-acento);
 }
 
-/* Sección Hero (Con la imagen del taller mecánico/industrial integrada) */
+/* Sección Hero*/
 .hero {
     background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(248, 249, 250, 0.95)), 
                 url('img/renovables.jpg') no-repeat center/cover;
